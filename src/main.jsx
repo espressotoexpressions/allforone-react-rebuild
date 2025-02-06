@@ -6,7 +6,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import MenuComponent from "./components/menu/MenuComponent.jsx";
 import SayHelloComponent from "./components/sayhello/SayHelloComponent.jsx"
 import AddTwoNumComponent  from "./components/addTwoNumbers/AddTwoNumComponent.jsx";
-
+import OddEvencomponent from "./components/oddOrEven/OddEvenComponent.jsx"
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
@@ -14,6 +14,7 @@ createRoot(document.getElementById("root")).render(
         <Route path="/" element={<MenuComponent />} />
         <Route path="/say-hello" element={<SayHelloComponent />} />
         <Route path="/add-two-num" element={<AddTwoNumComponent />} />
+        <Route path="/odd-or-even" element={<OddEvencomponent />} />
       </Routes>
     </BrowserRouter>
   </StrictMode>

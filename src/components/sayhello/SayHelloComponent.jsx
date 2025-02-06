@@ -6,8 +6,6 @@ import homeBtn from "../../assets/HomeRightBtn.png";
 import { Link } from "react-router-dom";
 
 const SayHelloComponent =()=>{
-
-
 const [userInput,setUserInput] =useState('');
 const [helloMsg, setHelloMsg] =useState('');
 
