@@ -1,0 +1,493 @@
+:root {
+    --brown:#AE6428; 
+    --gray:#EBEAE4;
+    --darkgray:#818181;
+    --offblue: #3E8CAF;
+    --green: #3D9966;
+    --pink: #DB3C63;
+    --darkorange: #E25026;
+    --darkbrown: #76482E;
+    --teal: #2DBCB7;
+    --orange: #F89B38;
+    --lightblue: #3BADE3;
+    --darkgreen: #338168;
+    --yellow: #F3B93F;
+
+
+}
+body{
+    background-color: var(--gray);
+    background-image: url('../assets/background.png');
+    background-size: cover;
+    background-repeat:repeat;
+    background-position: center;
+    font-family:  Helvetica,Arial, sans-serif;
+    
+}
+@font-face{
+    font-family : "bobbyjones-outline";
+    src:url(../assets/fonts/BobbyJones/BobbyJonesSoftOutline.otf);
+}
+@font-face{
+    font-family:"bobbyjones-solid";
+    src:url("../assets/fonts/BobbyJones/BobbyJonesSoft.otf")
+}
+
+h1{
+    
+    font-size: 150px;
+}
+h2{
+    font-size:100px;
+    font-family: "bobbyjones-solid",'Times New Roman', Times, serif;
+}
+h3{
+    font-size:75px;
+    font-family: "bobbyjones-solid",'Times New Roman', Times, serif;
+}
+.bobbyJonesOutlineFont{
+    font-family: "bobbyjones-outline",'Times New Roman', Times, serif;
+}
+
+.bobbyJonesSolidFont{
+    font-family: "bobbyjones-solid",'Times New Roman', Times, serif;
+}
+
+.btn-transparent {
+    background-color: transparent !important; /* Remove background */
+    border: none !important; /* Remove border */
+    padding: 0; /* Remove padding */
+  }
+
+
+  #sayHelloContainer{
+    color:var(--brown);
+  }
+
+  #nameInput{
+    width: 60%;
+  }
+
+  #btnSayHello{
+    background-color:var(--brown);
+    font-size:45px;
+    color: white;
+    height:100px;
+  }
+
+  
+  input,textarea{
+    border-radius: 20px !important;
+    font-size: 45px !important;
+    color: var(--darkgray) !important;
+    padding: 0 1.5rem !important; 
+
+  
+  }
+
+  button{
+    border-radius: 20px !important;
+  }
+
+  .inactive{
+    display:none !important;
+}
+
+
+/*add 2 numbers  container*/
+
+#add2NumbersContainer{
+  color:var(--offblue);
+}
+.add2NumbersInputHeader{
+background-color: var(--offblue);
+color: white;
+font-size:50px;
+font-family: "bobbyjones-solid";
+border-radius: 20px !important;
+
+}
+
+#add2NumbersSubmitBtn{
+  background-color: var(--lightblue);
+  color: white;
+  font-size:50px;
+  font-family: "bobbyjones-solid";
+  border-radius: 20px !important;
+  border:0px;
+  }
+
+#firstNumInput, #secondNumInput,#totalInput{
+
+  height: 200px;
+  text-align: center;
+  border: 0px;
+  font-size: 100px !important;
+}
+#totalInput{
+  height: 400px  !important;
+  color: var(--offblue) !important;
+}
+
+#blueMonsterImg{
+width: auto; /* Maintain width */
+object-fit: cover; /* Ensures the image maintains aspect ratio */
+  }
+
+  /* asking questions page styling*/
+  #askingQuestionsContainer{
+    color:var(--green);
+  }
+
+
+#askingQuestionsSubmitBtn{
+  background-color: var(--green);
+  color: white;
+  font-size:50px;
+  font-family: "bobbyjones-solid";
+  border-radius: 20px !important;
+  border:0px;
+  }
+
+#nameInput,#wakeUpInput{
+
+  height: 100px;
+  text-align: center;
+  border: 0px;
+  font-size:75px !important;
+}
+#askingQuestionsOutput{
+  height: 350px;
+  text-align: center;
+  border: 0px;
+  font-size: 65px !important;
+  color:var(--green) !important;
+
+}
+
+/*Greater than less than styling*/
+
+#greaterLessContainer{
+  color:var(--pink);
+}
+
+#greaterLessSubmitBtn{
+  background-color: var(--pink);
+  color: white;
+  font-size:50px;
+  font-family: "bobbyjones-solid";
+  border-radius: 20px !important;
+  border:0px;
+  }
+
+  #pinkMonsterImg{
+    width: auto; 
+    height: auto;
+    object-fit: cover;
+  }
+
+  #greaterLessOutput{
+    height: 350px;
+    text-align: center;
+    border: 0px;
+    font-size: 58px !important;
+    color: var(--pink) !important;
+  }
+
+  /*Madlibs styling*/
+
+
+  #madlibsContainer{
+    color:var(--darkorange);
+    font-size: 30px;
+      text-transform: uppercase;
+      font-weight: bold;
+  }
+  
+  #madlibsSubmitBtn{
+    background-color: var(--darkorange);
+    color: white;
+    font-size:50px;
+    font-family: "bobbyjones-solid";
+    border-radius: 20px !important;
+    border:0px;
+    }
+  
+    #orangeMonster{
+      width: auto; 
+      height: auto;
+      object-fit: cover;
+    }
+  
+
+  #madlibsContainer input{
+  height: 75px;
+  text-align: center;
+  border: 0px;
+  font-size: 30px !important;
+    }
+    #madlibLeftCol> .row{
+      padding: 1rem;
+      
+    }
+
+    #madlibRightCol> .row{
+      padding: 1rem ;
+    
+      
+    }
+
+    #madlibsOutput{
+      height: 450px;
+      text-align: center;
+      border: 0px;
+      font-size: 50px !important;
+      color: var(--darkorange) !important;
+    }
+
+    .madlibsStoryheader{
+      background-color: var(--darkorange);
+      color: white;
+      font-size:50px;
+      border-radius: 20px !important;
+      
+      }
+
+      /*Odd or even styling*/
+    #oddOrEvenContainer{
+        color:var(--darkbrown);
+        font-size: 30px;
+          text-transform: uppercase;
+          font-weight: bold
+      
+    }
+      #brownMonster{
+        width: auto; 
+        height:auto;
+        object-fit: cover;
+      }
+    
+      #oddOrEvenInput{
+        height: 300px;
+        width:400px;
+        text-align: center;
+        border: 0px;
+        font-size: 100px !important;
+      }
+
+      #oddEvenOutput{
+    
+        height: 300px;
+        text-align: center;
+        border: 0px;
+        font-size: 75px !important;
+        color: var(--darkbrown) !important;
+      }
+
+        
+  #oddEvenSubmitBtn{
+    background-color: var(--darkbrown);
+    color: white;
+    font-size:50px;
+    font-family: "bobbyjones-solid";
+    border-radius: 20px !important;
+    border:0px;
+    }
+
+/*Reverse It -number styling*/
+
+
+#reverseNumContainer{
+  color:var(--teal);
+  font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+    #tealMonsterImg{
+      width: 500px; 
+      height: auto;
+      object-fit: contain;
+    }
+  
+
+    #reverseNumInput{
+      height: 300px;
+      width:400px;
+      text-align: center;
+      border: 0px;
+      font-size: 50px !important;
+
+    }
+
+    #reverseNumSubmitBtn{
+      background-color: var(--teal);
+      color: white;
+      font-size:50px;
+      font-family: "bobbyjones-solid";
+      border-radius: 20px !important;
+      border:0px;
+      }
+
+
+    #reverseNumOutput{
+      height: 300px;
+      width:400px;
+      text-align: center;
+      border: 0px;
+      font-size: 50px !important;
+      color:var(--teal) !important;
+
+    }
+/* *Reverse It -string styling*/
+#reverseStrContainer{
+  color:var(--orange);
+  font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ #lightOrangeMonsterImg{
+      width: auto; 
+      height: 600px;
+      object-fit: cover;
+  }
+  
+
+    #reverseStrInput{
+      height: 300px;
+      width:400px;
+      text-align: center;
+      border: 0px;
+      font-size: 50px !important;
+
+    }
+
+    #reverseStrSubmitBtn{
+      background-color: var(--orange);
+      color: white;
+      font-size:50px;
+      font-family: "bobbyjones-solid";
+      border-radius: 20px !important;
+      border:0px;
+      }
+
+
+    #reverseStrOutput{
+      height: 300px;
+      width:400px;
+      text-align: center;
+      border: 0px;
+      font-size: 50px !important;
+      color:var(--orange) !important;
+
+    }
+
+ /* Magic 8 ball styling*/
+#magic8BallContainer{
+  color:var(--darkgreen);
+  font-size: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+ #darkGreenMonsterImg{
+      width: auto; 
+      height: 600px;
+      object-fit: cover;
+  }
+  
+
+    #magic8BallInput{
+      height: 300px;
+      width:400px;
+      text-align: center;
+      border: 0px;
+      font-size: 50px !important;
+
+    }
+
+    #magic8BallSubmitBtn{
+      background-color: var(--darkgreen);
+      color: white;
+      font-size:50px;
+      font-family: "bobbyjones-solid";
+      border-radius: 20px !important;
+      border:0px;
+      }
+
+
+    #magic8BallOutput{
+      height: 300px;
+      width:400px;
+      text-align: center;
+      border: 0px;
+      font-size: 50px !important;
+      color:var(--darkgreen) !important;
+
+    }
+
+    /*Restaurant picker styling*/
+    #restaurantPickerContainer{
+      padding:0 3rem;
+      color:var(--lightblue);
+      font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+      
+    }
+    #lightBlueMonster{
+      width: auto; 
+      height: 800px;
+      object-fit: contain;
+    }
+ 
+    #suggestionOutput{
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important; 
+      height: 300px;
+      width:auto;
+      text-align: center;
+      border: 0px;
+      font-size: 50px !important;
+      color:var(--lightblue) !important;
+  
+
+    }
+
+    #restaurantPickerContainer button{
+      background-color: var(--lightblue);
+      color: white;
+      font-size:50px;
+      font-family: "bobbyjones-solid";
+      border-radius: 20px !important;
+      border:0px;
+    }
+
+
+    /* index page*/
+    #splashMessage{
+      background-color: white;
+      border-radius: 20px !important;
+      font-size: 45px !important;
+      padding: 1.5rem !important;
+      
+    }
+
+    #homeMonsterFriendsImg{
+      width: auto; 
+    height: 600px;
+      object-fit: cover;
+
+      
+    }
+
+    /*index styling*/
+    #letsPlayBtn{
+      background-color: var(--yellow);
+      color: white;
+      font-size:50px;
+      font-family: "bobbyjones-solid";
+      border-radius: 20px !important;
+      border:0px;
+    }
