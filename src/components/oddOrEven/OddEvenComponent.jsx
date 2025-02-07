@@ -15,36 +15,35 @@ const OddEvencomponent = () => {
 
   return (
     <>
-      <div class=" pe-5 pt-5" id="oddOrEvenContainer">
+      <div className=" pe-5 pt-5" id="oddOrEvenContainer">
         {/* <!-- top Input section--> */}
-        <div class="grid grid-cols-[1fr_1fr_2fr] gap-4 justify-between">
+        <div className="grid grid-cols-[1fr_1fr_2fr] gap-4 justify-between">
           <img
-            className="ms-[-130px] mt-[-150px] h-[500px] w-auto"
+            className="ms-[-100px] mt-[-120px] h-auto w-auto object-contain"
             src={brownMonster}
             id="brownMonster"
             alt="Brown Monster"
           />
 
-          <div class="col-3 text-center justify-content-center">
-            {" "}
-            <h1 class="bobbyJonesOutlineFont text-8xl">ODD OR EVEN</h1>
+          <div className="flex items-center">
+            
+            <h1 className="bobbyJonesOutlineFont text-8xl ">ODD OR EVEN</h1>
           </div>
-          <div class="col-6 d-flex flex-column justify-content-around">
-            <div class="row ">
-              <h2>ENTER A NUMBER</h2>
-            </div>
-            <div class="row justify-content-center">
+          <div className="flex flex-col justify-content-around gap-4">
+           
+              <h2 className="text-6xl text-center">ENTER A NUMBER</h2>
+     
               <input
                 type="text"
-                class="w-75"
+                className=" w-full h-full"
                 id="oddOrEvenInput"
                 placeholder="0"
                 onChange={(e) => setUserInput(e.target.value)}
               />
-            </div>
-            <div class="row justify-content-center ">
+     
+            <div className="flex justify-center">
           
-              <button id="oddEvenSubmitBtn" onClick={SubmitBtn} class="w-50">
+              <button id="oddEvenSubmitBtn" onClick={SubmitBtn} className="w-3/4">
 
                 SUBMIT
               </button>
@@ -52,13 +51,13 @@ const OddEvencomponent = () => {
           </div>
         </div>
         {/* <!--bottom result setion--> */}
-        <div class=" px-5  justify-content-between overflow-hidden">
-          <h3> THE ANSWER IS:</h3>
+        <div className="flex flex-col gap-4 m-10 justify-content-between justify-end h-">
+          <h3 className="text-6xl"> THE ANSWER IS:</h3>
 
-          <div class="flex place-content-between">
+          <div className="flex place-content-between 0">
             <textarea
               readonly
-              class="px-6 py-3 form-control text-center justify-center"
+              className="text-center justify-center"
               id="oddEvenOutput"
               value={oddEvenMsg}
             ></textarea>

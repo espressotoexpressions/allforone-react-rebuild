@@ -15,58 +15,59 @@ const AskQuestionsComponent = () => {
 
   return (
     <>
-    <div id="askingQuestionsContainer" className="flex place-items-center w-full">
+    <div id="askingQuestionsContainer" className="flex w-full p-5">
         
-      <div className=" flex-col justify-items-between align-items-center">
-        <h3 className=""> WHAT IS YOUR NAME?</h3>
+      <div className="flex flex-col  items-center gap-4 p-10">
+        <h3 className="text-center text-6xl"> WHAT IS YOUR NAME?</h3>
         <input
-          type="text"
-          className=""
+          type="text "
+          className="w-3/4"
           id="nameInput"
           onChange={(e) => {
             setUserName(e.target.value);
           }}
         />
-        <h3 className="text-center"> WHAT TIME DID YOU WAKE UP?</h3>
+        <h3 className="text-center text-6xl"> WHAT TIME DID YOU WAKE UP?</h3>
         <input
           type="text"
-          className=" mb-3"
+          className="w-3/4"
           id="wakeUpInput"
           onChange={(e) => {
             setWakeupTime(e.target.value);
           }}
         />
-        <div>
+
           <button
             id="askingQuestionsSubmitBtn"
-            className="w-50"
+            className="w-1/2"
             onClick={SubmitBtn}
           >
             SUBMIT
           </button>
-        </div>
+
       </div>
-      <div className="flex-col text-center">
-        <h1 className="bobbyJonesOutlineFont">asking Questions</h1>
+      <div className="flex flex-col justify-center text-center">
+        <h1 className="bobbyJonesOutlineFont text-8xl">asking Questions</h1>
 
         <textarea
           className="p-5"
-          id="askingQuestionsOutput" row="3"
-          value={askQMsg}
+          id="askingQuestionsOutput" rows="3"
+          value={askQMsg} 
+          readOnly
         ></textarea>
       </div>
 
     </div>
 
-    <div className="flex">
-            <div className="col-10 d-flex justify-content-between overflow-hidden">
+    <div className="flex justify-center w-full ">
+            <div className="justify-content-between overflow-hidden ">
                 <img 
                 className="mb-[-200px]"
                  src={greenMonster} alt="Green Monster" />
             </div>
-            <div className="col-2 d-flex align-items-end "> 
-          <Link to='/' className="content-end ">
-            <img className="h-[10em]"
+            <div className="flex justify-center items-end "> 
+          <Link to='/' className="">
+            <img className="h-[10em] "
               src={homeBtn}
               id="homeBtn"
               alt="Home Button" 
