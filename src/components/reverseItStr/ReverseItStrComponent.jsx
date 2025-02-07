@@ -14,37 +14,41 @@ const ReversetItStrComponent = () => {
 
   return (
     <>
-      <div class="flex" id="reverseStrContainer">
-        <div class="flex vh-full">
+      <div class="flex  flex-grow" id="reverseStrContainer">
+        <div class="grid grid-cols-2 place-items-center ">
           {/* <!-- left images--> */}
-          <div class="d-flex flex-column">
+          <div class=" ">
            
               <img
-                //   style="margin-left: -200px; margin-top: 150px;"
+                  className=" object-contain w-auto"
                 src={lightOrangeMonster}
                 id="lightOrangeMonsterImg"
                 alt="Light orangeMonster Monster"
               />
            
-            <div class=" mt-auto mb-5 pb-5">
-              <a href="./menu.html">
-                <img src={homeBtn} alt="Home Button" />
-              </a>
+            <div class=" flex justify-center items-center mt-auto mb-5 pb-5">
+            <Link to='/' className=" ">
+            <img className="h-[5em]"
+              src={homeBtn}
+              id="homeBtn"
+              alt="Home Button" 
+            />
+          </Link>
             </div>
           </div>
 
           {/* <!--right input/output section--> */}
-          <div class="p-5">
-            <h2 class="bobbyJonesOutlineFont text-center">REVERSE STRING</h2>
-            <div class="row">
-              <h3>ENTER TEXT TO REVERSE</h3>
+          <div class="p-5 flex flex-col flex-grow items-center">
+            <h2 class="bobbyJonesOutlineFont  text-8xl">REVERSE STRING</h2>
+            <div class="">
+              <h3 className="text-6xl">ENTER TEXT TO REVERSE</h3>
               <textarea
-                class="w-full form-control"
+                class="w-full "
                 id="reverseStrInput"
                 rows="3"
                 onChange={(e) => setUserInput(e.target.value)}
               ></textarea>
-              <div class="flex justify-center my-5">
+              <div class="my-5 text-center">
                 <button
                   id="reverseStrSubmitBtn"
                   onClick={SubmitBtn}
@@ -54,10 +58,10 @@ const ReversetItStrComponent = () => {
                 </button>
               </div>
             </div>
-            <div class="row">
-              <h3>YOUR REVERSED TEXT</h3>
+            <div class="">
+              <h3 className="text-6xl">YOUR REVERSED TEXT</h3>
               <textarea
-                class="w-100 form-control"
+                class=""
                 id="reverseStrOutput"
                 rows="3"
                 value={reverseItMsg}

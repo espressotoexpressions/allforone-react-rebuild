@@ -239,7 +239,7 @@ object-fit: cover; /* Ensures the image maintains aspect ratio */
     }
 
     #madlibsOutput{
-      height: 450px;
+      /* height: 450px; */
       text-align: center;
       border: 0px;
       font-size: 50px !important;
@@ -338,7 +338,7 @@ object-fit: cover; /* Ensures the image maintains aspect ratio */
     }
 /* *Reverse It -string styling*/
 #reverseStrContainer{
-  color:var(--orange);
+  color:var(--orange) !important;
   font-size: 30px;
     text-transform: uppercase;
     font-weight: bold;
@@ -347,13 +347,11 @@ object-fit: cover; /* Ensures the image maintains aspect ratio */
  #lightOrangeMonsterImg{
       width: auto; 
       height: 600px;
-      object-fit: cover;
   }
   
 
     #reverseStrInput{
-      height: 300px;
-      width:400px;
+  
       text-align: center;
       border: 0px;
       font-size: 50px !important;
@@ -371,8 +369,7 @@ object-fit: cover; /* Ensures the image maintains aspect ratio */
 
 
     #reverseStrOutput{
-      height: 300px;
-      width:400px;
+
       text-align: center;
       border: 0px;
       font-size: 50px !important;
@@ -397,7 +394,7 @@ object-fit: cover; /* Ensures the image maintains aspect ratio */
 
     #magic8BallInput{
       height: 300px;
-      width:400px;
+      /* width:400px; */
       text-align: center;
       border: 0px;
       font-size: 50px !important;
@@ -416,7 +413,7 @@ object-fit: cover; /* Ensures the image maintains aspect ratio */
 
     #magic8BallOutput{
       height: 300px;
-      width:400px;
+      /* width:400px; */
       text-align: center;
       border: 0px;
       font-size: 50px !important;

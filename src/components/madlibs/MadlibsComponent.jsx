@@ -21,18 +21,25 @@ const MadlibsComponent = () => {
     const [madlibMsg, setMadlibMsg] = useState('');
 
     const SubmitBtn =async()=>{
+        let madlibsInputGrp = document.getElementById("madlibsInputGrp");
+        let storyContainer =document.getElementById("storyContainer");
+        let madlibsSubmitBtn=document.getElementById("madlibsSubmitBtn");
+
         setMadlibMsg(await madlibsService(noun1,adjective2,number3,noun4,noun5,adjective6, noun7,number8,number9, adjective10,adverb11,noun12))
+        console.log(madlibMsg);
+        madlibsInputGrp.classList.add("inactive");
+        storyContainer.classList.remove("inactive");
+        madlibsSubmitBtn.classList.add("inactive");
     }
   return (
     <>
-      <div ClassName="" id="madlibsContainer">
-        <div ClassName="">
-          {/* <div ClassName="col-4 d-flex flex-column justify-content-center"> */}
-            <h2 ClassName="bobbyJonesOutlineFont">MADLIBS</h2>
-          {/* </div> */}
-          <div ClassName="col-8">
+      <div className="p-10" id="madlibsContainer">
+        <div className=" flex">
+            <h2 className="bobbyJonesOutlineFont text-8xl">MADLIBS</h2>
+         
+          <div className="">
             <img
-              ClassNameName="mt-[-250px]"
+              className="mt-[-250px] ms-[200px]"
               src={orangeMonster}
               alt="Orange Monster"
             />
@@ -40,143 +47,143 @@ const MadlibsComponent = () => {
         </div>
 
         {/* <!--middle container --> */}
-        <div ClassName="flex" id="madlibsInputGrp" 
-        ClassNameName="mt-[-100px]"
+        <div id="madlibsInputGrp" 
+        className="mt-[-100px] flex p-10 ms-10"
         >
           {/* <!--left column--> */}
-          <div ClassName="flex-col" id="madlibLeftCol">
-            <div ClassName="flex">
-              <div ClassName="col-4">
+          <div className="flex flex-col gap-4" id="madlibLeftCol">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>TEACHER'S NAME</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="noun1Input" onChange={(e)=>setNoun1(e.target.value)} />
+              <div className="w-1/2">
+                <input type="text" className="w-100" id="noun1Input" onChange={(e)=>setNoun1(e.target.value)} />
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Adjective</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="adjective2Input" onChange={(e)=>setAdjective2(e.target.value)}/>
+              <div className="w-2/3">
+                <input type="text" className="w-100" id="adjective2Input" onChange={(e)=>setAdjective2(e.target.value)}/>
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Number</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="number3Input" onChange={(e)=>setNumber3(e.target.value)}/>
+              <div className="w-2/3">
+                <input type="text" className="w-100" id="number3Input" onChange={(e)=>setNumber3(e.target.value)}/>
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Animals</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="noun4Input"  onChange={(e)=>setNoun4(e.target.value)}/>
+              <div className="w-2/3">
+                <input type="text" className="w-100" id="noun4Input"  onChange={(e)=>setNoun4(e.target.value)}/>
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Liquid</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="" id="noun5Input" onChange={(e)=>setNoun5(e.target.value)} />
+              <div className="w-2/3">
+                <input type="text" className="" id="noun5Input" onChange={(e)=>setNoun5(e.target.value)} />
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Adjective</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="" id="adjective6Input" onChange={(e)=>setAdjective6(e.target.value)} />
+              <div className="w-2/3">
+                <input type="text" className="" id="adjective6Input" onChange={(e)=>setAdjective6(e.target.value)} />
               </div>
             </div>
           </div>
           {/* <!--right column--> */}
-          <div ClassName="flex-col" id="madlibRightCol">
-            <div ClassName="flex">
-              <div ClassName="col-4">
+          <div className="flex flex-col gap-4" id="madlibRightCol">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Noun</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="noun7Input" onChange={(e)=>setNoun7(e.target.value)} />
+              <div className="w-2/3">
+                <input type="text" className="w-100" id="noun7Input" onChange={(e)=>setNoun7(e.target.value)} />
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Number</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="number8Input"  onChange={(e)=>setNumber8(e.target.value)}/>
+              <div className="w-2/3">
+                <input type="text" className="w-100" id="number8Input"  onChange={(e)=>setNumber8(e.target.value)}/>
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Another Number</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="number9Input" onChange={(e)=>setNumber9(e.target.value)} />
+              <div className="w-2/3">
+                <input type="text" className="w-100" id="number9Input" onChange={(e)=>setNumber9(e.target.value)} />
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Adjective</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="adjective10Input" onChange={(e)=>setAdjective10(e.target.value)}/>
+              <div className="w-2/3">
+                <input type="text" className="w-100" id="adjective10Input" onChange={(e)=>setAdjective10(e.target.value)}/>
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Adverb</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="adverb11Input" onChange={(e)=>setAdverb11(e.target.value)}/>
+              <div className="w-2/3">
+                <input type="text" className="w-100" id="adverb11Input" onChange={(e)=>setAdverb11(e.target.value)}/>
               </div>
             </div>
-            <div ClassName="flex">
-              <div ClassName="col-4">
+            <div className="flex">
+              <div className="w-1/3">
                 <p>Your Name</p>
               </div>
-              <div ClassName="col-8">
-                <input type="text" ClassName="w-100" id="noun12Input" onChange={(e)=>setNoun12(e.target.value)}/>
+              <div className="w-2/3">
+                <input type="text" className="w-100" id="noun12Input" onChange={(e)=>setNoun12(e.target.value)}/>
               </div>
             </div>
           </div>
         </div>
         {/* <!--middle container for story--> */}
 
-        <div ClassName="flex inactive" id="storyContainer">
-          <div ClassName="col">
-            <div ClassName="flex madlibsStoryheader text-center">
-              <h3> THIS IS YOUR MADLIBS GENERATED STORY</h3>
+        <div className="flex flex-col  inactive" id="storyContainer">
+       
+            <div className="flex  flex-grow madlibsStoryheader text-center">
+              <h3 className="p-4"> THIS IS YOUR MADLIBS GENERATED STORY</h3>
             </div>
-            <div ClassName="flex">
+            <div className="flex">
               <textarea
                 readonly
-                ClassName="w-100 form-control"
+                className="w-full"
                 id="madlibsOutput"
-                flexs="4"
+                rows="4"
                 value = {madlibMsg}
               ></textarea>
             </div>
           </div>
-        </div>
+     
 
         {/* <!--submit area--> */}
-        <div ClassName="flex mt-5">
-          <div ClassName="col-8 d-flex flex-column align-items-end">
-            <button id="madlibsSubmitBtn" ClassName="w-50" onClick={SubmitBtn}>
+        <div className="flex mt-5 gap-4">
+          <div className="w-2/3 flex items-end justify-end">
+            <button id="madlibsSubmitBtn" className="w-1/3" onClick={SubmitBtn}>
               
               SUBMIT
             </button>
           </div>
-          <div ClassName="col-4 d-flex flex-column align-items-end justify-content-center">
-            <Link to="/" ClassNameName="content-end ">
+          <div className="w-1/3 d-flex flex-column align-items-end justify-content-center">
+            <Link to="/" className="content-end ">
               <img
-                ClassNameName="h-[10em]"
+                className="h-[5em]"
                 src={homeBtn}
                 id="homeBtn"
                 alt="Home Button"

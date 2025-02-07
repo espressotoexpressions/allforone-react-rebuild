@@ -13,21 +13,21 @@ const Magic8BallComponent = ()=>{
     }
     return(
         <>
-          <div className="flex" id="madgic8BallContainer">
-      <div className="flex vh-100">
+          <div className="flex flex-grow "  id="magic8BallContainer">
+      <div className="flex  ">
         {/* <!-- left images--> */}
 
-        <div className="col-4 d-flex flex-column">
+        <div className="">
           <div >
             <img
-            //   style="margin-left: -200px; margin-top: 150px;"
+              className="-ms-[-80px] mt-[100px]" 
               src={darkGreenMonster}              id="darkGreenMonsterImg"
               alt="Dark Green  Monster"
             />
           </div>
-          <div className="row-6 mt-auto mb-5 pb-5">
+          <div className="flex p-10  h-auto justify-center">
           <Link to='/' className="content-end ">
-            <img className="h-[10em]"
+            <img className="h-[5em]"
               src={homeBtn}
               id="homeBtn"
               alt="Home Button" 
@@ -38,24 +38,25 @@ const Magic8BallComponent = ()=>{
 
         {/* <!--right input/output section--> */}
         <div className="col-8 p-5">
-          <h2 className="bobbyJonesOutlineFont text-center">MAGIC 8 BALL</h2>
+          <h2 className="bobbyJonesOutlineFont text-center text-8xl">MAGIC 8 BALL</h2>
           <div className="row">
-            <h3  className="text-3xl">ENTER YOUR QUESTION FOR ME</h3>
+            <h3  className="text-6xl">ENTER YOUR QUESTION FOR ME</h3>
             <textarea
-              className="w-100 form-control"
+              className="w-full"
               id="magic8BallInput"
               rows="3"
               onChange={(e)=>{setUserInput(e.target.value)}}
             
             ></textarea>
-            <div className="row justify-content-center my-5">
-              <button id="magic8BallSubmitBtn" onClick={SubmitBtn} className="w-50">SUBMIT</button>
+            <div className="text-center">
+              <button className ="w-1/2" id="magic8BallSubmitBtn" onClick={SubmitBtn} >SUBMIT</button>
             </div>
           </div>
-          <div className="row">
-            <h3>I THINK...</h3>
+          <div className="">
+            <h3 className="text-6xl">I THINK...</h3>
             <textarea
-              className="w-100 form-control"
+              className="w-full
+               form-control"
               id="magic8BallOutput"
               rows="3"
               value ={eightBallMsg}
