@@ -2,16 +2,16 @@ import brownMonster from "./brownmonster.png";
 import homeBtn from "../../assets/HomeRightBtn.png";
 import { oddEvenService } from "../services/services";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const OddEvencomponent = () => {
-  const [userInput, setUserInput] = useState('');
-  const [oddEvenMsg, setOddEvenMsg]=useState('');
+  const [userInput, setUserInput] = useState("");
+  const [oddEvenMsg, setOddEvenMsg] = useState("");
 
-  const SubmitBtn = async()=>{
+  const SubmitBtn = async () => {
     console.log(userInput);
-    setOddEvenMsg (await oddEvenService(userInput));
-
-  }
+    setOddEvenMsg(await oddEvenService(userInput));
+  };
 
   return (
     <>
@@ -39,13 +39,13 @@ const OddEvencomponent = () => {
                 class="w-75"
                 id="oddOrEvenInput"
                 placeholder="0"
-                onChange={(e)=>setUserInput(e.target.value)}
+                onChange={(e) => setUserInput(e.target.value)}
               />
             </div>
             <div class="row justify-content-center ">
-              {" "}
+          
               <button id="oddEvenSubmitBtn" onClick={SubmitBtn} class="w-50">
-                {" "}
+
                 SUBMIT
               </button>
             </div>
@@ -53,20 +53,24 @@ const OddEvencomponent = () => {
         </div>
         {/* <!--bottom result setion--> */}
         <div class=" px-5  justify-content-between overflow-hidden">
-        
-            <h3> THE ANSWER IS:</h3>
-      
-          <div class="flex">
+          <h3> THE ANSWER IS:</h3>
+
+          <div class="flex place-content-between">
             <textarea
               readonly
-              class="w-100 px-6 py-3 form-control text-center justify-center"
+              class="px-6 py-3 form-control text-center justify-center"
               id="oddEvenOutput"
-            value={oddEvenMsg}
+              value={oddEvenMsg}
             ></textarea>
 
-          <a href="./menu.html">
-            <img src={homeBtn} alt="Home Button" />
-          </a>
+            <Link to="/" className="content-end ">
+              <img
+                className="h-[5em]"
+                src={homeBtn}
+                id="homeBtn"
+                alt="Home Button"
+              />
+            </Link>
           </div>
         </div>
       </div>

@@ -14,7 +14,7 @@ const MenuComponent=()=>{
         <Link to='/reverse-it-str'> <Button color="blue">Reverse It-String</Button></Link>
         <Link to='/greater-less'> <Button color="blue"> Greater Than Or Less THan</Button></Link>
         <Link to='/magic-8-ball'> <Button color="blue">Magic 8 Ball</Button></Link>
-        <Link to='/mad-libs'> <Button color="blue">Madlibs</Button></Link>
+        <Link to='/madlibs'> <Button color="blue">Madlibs</Button></Link>
         <Link to='/restaurant-picker'> <Button color="blue">Restaurant Picker</Button></Link>
         </div>
       </>

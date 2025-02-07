@@ -80,7 +80,7 @@ h3{
     border-radius: 20px !important;
     font-size: 45px !important;
     color: var(--darkgray) !important;
-    padding: 0 1.5rem !important; 
+
 
   
   }
@@ -157,7 +157,7 @@ object-fit: cover; /* Ensures the image maintains aspect ratio */
   font-size:75px !important;
 }
 #askingQuestionsOutput{
-  height: 350px;
+  height: 450px;
   text-align: center;
   border: 0px;
   font-size: 65px !important;
@@ -309,7 +309,7 @@ object-fit: cover; /* Ensures the image maintains aspect ratio */
 
     #reverseNumInput{
       height: 300px;
-      width:400px;
+
       text-align: center;
       border: 0px;
       font-size: 50px !important;
@@ -327,8 +327,9 @@ object-fit: cover; /* Ensures the image maintains aspect ratio */
 
 
     #reverseNumOutput{
+      /* height: auto; */
       height: 300px;
-      width:400px;
+  
       text-align: center;
       border: 0px;
       font-size: 50px !important;
