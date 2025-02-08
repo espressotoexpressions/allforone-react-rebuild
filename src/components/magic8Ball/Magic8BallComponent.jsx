@@ -1,4 +1,4 @@
-import darkGreenMonster from "./darkGreenMonster.png";
+import darkGreenMonster from "./darkgreenMonster.png";
 import homeBtn from "../../assets/HomeLeftBtn.png";
 import { magic8BallService } from "../services/services";
 import { useState } from "react";
