@@ -79,7 +79,7 @@ const RestaurantPickerComponent = () => {
                 value={restaurantName}
               ></textarea>
             </div>
-            <h1 className="bobbyJonesOutlineFont"> RESTAURANT PICKER</h1>
+            <h1 className=" text-8xl bobbyJonesOutlineFont"> RESTAURANT PICKER</h1>
           </div>
         </div>
       </div>
