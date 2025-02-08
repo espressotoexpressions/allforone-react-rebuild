@@ -1,4 +1,4 @@
-import brownMonster from "./brownmonster.png";
+import brownMonster from "./brownMonster.png";
 import homeBtn from "../../assets/HomeRightBtn.png";
 import { oddEvenService } from "../services/services";
 import { useState } from "react";
