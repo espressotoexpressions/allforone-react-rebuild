@@ -19,21 +19,21 @@ const RestaurantPickerComponent = () => {
         setRestaurantName(await restaurantPickerService("filipino"));
     }
   return (
-    <div className="vh-100" id="restaurantPickerContainer">
-      <div className="flex h-100 grid-cols-12">
+    <div className="" id="restaurantPickerContainer">
+      <div className="flex flex-grow w-full">
         {/* <!-- left images--> */}
-        <div className="col-span-4 ">
+        <div className="w-1/3 ">
           <div className="">
             <img
               src={lighBlueMonster}
-               className="mt-[-200px] ms-[-250px]"
+               className="mt-[-200px] ms-[-190px]"
               id="lightBlueMonster"
               alt="Light Blue Monster"
             />
           </div>
           <div className=" mt-auto mb-5 pb-5 d-flex justify-content-center">
           <Link to='/' classNameName="content-end ">
-            <img classNameName="h-[10em]"
+            <img classNameName="h-[5em]"
               src={homeBtn}
               id="homeBtn"
               alt="Home Button" 
@@ -43,42 +43,38 @@ const RestaurantPickerComponent = () => {
         </div>
 
         {/* <!--right input/output section--> */}
-        <div className="col-span-8  gap-4 m-auto">
-          <div className="justify-content-center">
+        <div className="w-2/3 flex flex-col justify-center items-center gap-4 m-auto">
+          {/* <div className="w-full"> */}
             <h3
-              className="bobbyJonesSolidFont w-full text-center"
+              className="bobbyJonesSolidFont w-full text-6xl text-center"
               
             >
               WHAT CUISINE WOULD YOU LIKE TO HAVE FOR TODAY?
             </h3>
-          </div>
+          {/* </div> */}
 
-          <div className="row justify-content-around text-center gap-3">
-            <div className="d-flex justify-content-around ">
-              <button id="chineseBtn" className="w-25"  onClick={SubmitChineseBtn}>
-                {" "}
+          <div className="flex flex-col items-center gap-3">
+            <div className=" flex gap-4 ">
+              <button id="chineseBtn" className="w-full"  onClick={SubmitChineseBtn}>
                 CHINESE
               </button>
-              <button id="italianBtn" className="w-25"  onClick={SubmitItalianBtn}>
-                {" "}
+              <button id="italianBtn" className="w-full"  onClick={SubmitItalianBtn}>
                 ITALIAN
               </button>
             </div>
-            <div className="row-6 d-flex justify-content-around mb-3">
-              <button id="filipinoBtn" className="w-25"  onClick={SubmitFilipinoBtn}>
-                {" "}
+            <div className="flex  gap-4">
+              <button id="filipinoBtn" className="w-full"  onClick={SubmitFilipinoBtn}>
                 FILIPINO
               </button>
-              <button id="anyBtn" className="w-25" onClick={SubmitAnyBtn}>
-                {" "}
+              <button id="anyBtn" className="w-full" onClick={SubmitAnyBtn}>
                 ANY
               </button>
             </div>
 
-            <div className="row  ">
-              <h3> MY RESTAURANT SUGGESTION FOR YOU</h3>
+            <div className="row ">
+              <h3 className ="text-6xl"> MY RESTAURANT SUGGESTION FOR YOU</h3>
               <textarea
-                className="w-100 form-control"
+                className="w-full "
                 id="suggestionOutput"
                 value={restaurantName}
               ></textarea>
